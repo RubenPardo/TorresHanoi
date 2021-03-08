@@ -82,5 +82,23 @@ namespace Torres_de_Hanoi
             return elementos.Count() == 0;
         }
 
+        public string ToString()
+        {
+            string res = nombre + ": ";
+            if (isEmpty())
+            {
+                nombre += "Vacia.";
+            }
+            else
+            {
+                foreach(Disco d in elementos)
+                {
+                    nombre+= d.Valor + ", ";
+                }
+            }
+
+            return res;
+        }
+
     }
 }

@@ -22,14 +22,17 @@ namespace Torres_de_Hanoi
             Hanoi h = new Hanoi();
 
             p1.push(d3);
-            p1.push(d2);
-            p1.push(d1);
+            p2.push(d2);
+            p2.push(d1);
 
+
+
+            Console.WriteLine(p1.ToString());
+            Console.WriteLine(p2.ToString());
             h.mover_disco(p1, p2);
-            Console.WriteLine("Top p1: "+p1.Top);
-            Console.WriteLine("Top p2: "+p2.Top);
+            Console.WriteLine(p1.ToString());
+            Console.WriteLine(p2.ToString());
 
-            
 
 
 

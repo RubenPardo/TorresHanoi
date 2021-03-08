@@ -10,36 +10,45 @@ namespace Torres_de_Hanoi
     {
         static void Main(string[] args)
         {
+            bool seguir = true;
 
+             Console.WriteLine("EJERCICIO TORRES HANOI-------------------------------");
 
-            Disco d1 = new Disco(1);
-            Disco d2 = new Disco(2);
-            Disco d3 = new Disco(3);
-            Disco d4 = new Disco(4);
+            while (seguir)
+            {
+                // leer el numero n de piezas
+                Console.WriteLine("Introduzca numero de piezas: ");
+                int n = Convert.ToInt32(Console.ReadLine());
 
-            Pila p1 = new Pila("INI");
-            Pila p2 = new Pila("FIN");
-            Pila p3 = new Pila("AUX");
+                // crear las 3 pilas y el objeto hanoi
+                Pila p1 = new Pila("INI");
+                Pila p2 = new Pila("FIN");
+                Pila p3 = new Pila("AUX");
 
-            Hanoi h = new Hanoi();
+                Hanoi h = new Hanoi();
 
-            p1.push(d4);
-            p1.push(d3);
-            p1.push(d2);
-            p1.push(d1);
+                // añadir los n discos a la pila ini
+                for (int i = n; i >= 1; i--)
+                {
+                    p1.push(new Disco(i));
+                }
 
-            Console.WriteLine(p1.ToString());
-            Console.WriteLine(p3.ToString());
-            Console.WriteLine(p2.ToString());
+                Console.WriteLine(p1.ToString());
+                Console.WriteLine(p3.ToString());
+                Console.WriteLine(p2.ToString());
 
-            Console.WriteLine("Se completo en: " + h.iterativo(p1.Elementos.Count, p1, p2, p3) + " movimientos");
+                Console.WriteLine("Se completo en: " + h.iterativo(p1.Elementos.Count, p1, p2, p3) + " movimientos");
 
+                // Keep the console window open in debug mode.
+                Console.WriteLine("Pulsa 'q' para salir o cualquier otra para repetir");
+                char c = Console.ReadLine()[0];
+                if (c.Equals('q'))
+                {
+                    seguir = false;
+                }
+            }
 
-
-
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
+           
         }
     }
 }

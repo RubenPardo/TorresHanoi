@@ -38,6 +38,7 @@ namespace Torres_de_Hanoi
                 Console.WriteLine(p2.ToString());
 
                 Console.WriteLine("Se completo en: " + h.iterativo(p1.Elementos.Count, p1, p2, p3) + " movimientos");
+                Console.WriteLine("Se completo en: " + h.recursivo(p1.Elementos.Count, p1, p2, p3) + " movimientos");
 
                 // Keep the console window open in debug mode.
                 Console.WriteLine("Pulsa 'q' para salir o cualquier otra para repetir");

@@ -12,6 +12,21 @@ namespace Torres_de_Hanoi
 
         private List<Disco> elementos;
         private int top;// -1 si no hay ninguna
+        private string nombre;
+
+
+        // nombre de la pila
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+            set
+            {
+                nombre = value;
+            }
+        }
 
         // numero de discos en la pila
         public int Size {
@@ -33,14 +48,16 @@ namespace Torres_de_Hanoi
        
 
         /* TODO: Implementar métodos */
-        public Pila()
+        public Pila(string nombre)
         {
+            this.nombre = nombre;
+            top = -1;
             elementos = new List<Disco>();
         }
 
         public void push(Disco d)
         {
-            top = d.Value();
+            top = d.Valor;
             elementos.Add(d);
         }
 
@@ -51,7 +68,7 @@ namespace Torres_de_Hanoi
             // si al borrar el disco esta vacio el top = -1
             if (!isEmpty())
             {
-                top = elementos.Last().Value();
+                top = elementos.Last().Valor;
             }
             else
             {

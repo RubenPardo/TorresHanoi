@@ -87,13 +87,13 @@ namespace Torres_de_Hanoi
             string res = nombre + ": ";
             if (isEmpty())
             {
-                nombre += "Vacia.";
+                res += "Vacia.";
             }
             else
             {
                 foreach(Disco d in elementos)
                 {
-                    nombre+= d.Valor + ", ";
+                    res+= d.Valor + ", ";
                 }
             }
 

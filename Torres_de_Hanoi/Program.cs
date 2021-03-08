@@ -11,6 +11,11 @@ namespace Torres_de_Hanoi
         static void Main(string[] args)
         {
 
+
+            /*Disco d = new Disco(1);
+            d.Valor = 2;
+            Console.WriteLine(d.Valor);*/
+
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();

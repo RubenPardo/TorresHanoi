@@ -135,6 +135,33 @@ namespace Torres_de_Hanoi
         }
 
 
+        public int recursivo(int n, Pila ini, Pila fin, Pila aux)
+        {
+            int movimientos = 0;
+            if (n == 1)
+            {
+                mover_disco(ini, fin);
+                movimientos++;
+                Console.WriteLine(ini.ToString());
+                Console.WriteLine(aux.ToString());
+                Console.WriteLine(fin.ToString());
+            }
+            else
+            {
+                recursivo(n - 1, ini, aux, fin);
+                mover_disco(ini, fin);
+                movimientos++;
+                Console.WriteLine(ini.ToString());
+                Console.WriteLine(aux.ToString());
+                Console.WriteLine(fin.ToString());
+
+                recursivo(n - 1, aux, fin, ini);
+            }
+            
+
+            return movimientos;
+        }
+
         /**
          * Comprueba si la pila fin tiene todas las piezas y ademas 
          * todas estan ordenadas

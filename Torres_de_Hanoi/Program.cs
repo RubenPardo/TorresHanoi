@@ -16,19 +16,21 @@ namespace Torres_de_Hanoi
             Disco d2 = new Disco(2);
             Disco d3 = new Disco(3);
 
-            Pila p = new Pila("Pila 1");
-            Console.WriteLine("Se crea la pila: "+p.Nombre+", esta vacia: "+p.isEmpty());
-            Console.WriteLine("Se añade d2");
-            p.push(d2);
-            Console.WriteLine("El top de la pila es: "+p.Top+ ", esta vacia:" +p.isEmpty());
+            Pila p1 = new Pila("Pila 1");
+            Pila p2 = new Pila("Pila 2");
 
-            Console.WriteLine("Se añade d1");
-            p.push(d1);
-            Console.WriteLine("El top de la pila es: " + p.Top + ", esta vacia:" + p.isEmpty());
+            Hanoi h = new Hanoi();
 
-            Disco dBorrado = p.pop();
-            Console.WriteLine("Se ha borrado: " + dBorrado.Valor);
-            Console.WriteLine("El top de la pila es: " + p.Top + ", esta vacia:" + p.isEmpty());
+            p1.push(d3);
+            p1.push(d2);
+            p1.push(d1);
+
+            h.mover_disco(p1, p2);
+            Console.WriteLine("Top p1: "+p1.Top);
+            Console.WriteLine("Top p2: "+p2.Top);
+
+            
+
 
 
 

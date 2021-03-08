@@ -1,0 +1,7 @@
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe.config
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.pdb
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csprojAssemblyReference.cache
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
+F:\Cosas\CARPETA UNI\2 curso\2 cuatri\Algorítmica\Practicas\P1\proyectoHanoiC#\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb

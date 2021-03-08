@@ -10,10 +10,48 @@ namespace Torres_de_Hanoi
     {
         static void Main(string[] args)
         {
+            bool seguir = true;
 
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
+             Console.WriteLine("EJERCICIO TORRES HANOI-------------------------------");
+
+            while (seguir)
+            {
+                // leer el numero n de piezas
+                Console.WriteLine("Introduzca numero de piezas: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                // crear las 3 pilas y el objeto hanoi
+                Pila p1 = new Pila("INI");
+                Pila p2 = new Pila("FIN");
+                Pila p3 = new Pila("AUX");
+
+                Hanoi h = new Hanoi();
+
+                // añadir los n discos a la pila ini
+                for (int i = n; i >= 1; i--)
+                {
+                    p1.push(new Disco(i));
+                }
+
+                Console.WriteLine(p1.ToString());
+                Console.WriteLine(p3.ToString());
+                Console.WriteLine(p2.ToString());
+
+                Console.WriteLine("Se completo en: " + h.iterativo(p1.Elementos.Count, p1, p2, p3) + " movimientos");
+
+                //Console.WriteLine("Se completo en: " + h.recursivo(p1.Elementos.Count, p1, p2, p3) + " movimientos");
+
+                Console.WriteLine("El número mínimo de movimientos para " + n + " piezas es: " + (Math.Pow(2, n) - 1));
+
+                Console.WriteLine("Pulsa 'q' para salir o cualquier otra para repetir");
+                char c = Console.ReadLine()[0];
+                if (c.Equals('q'))
+                {
+                    seguir = false;
+                }
+            }
+
+           
         }
     }
 }
